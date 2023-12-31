@@ -7,9 +7,11 @@ const nav = data.nav
 <nav>
   <ul>
     {nav.map((item) => (
-      <a href={item.url}>
-        <li class="nav__li">{item.name}</li>
-      </a>
+      <li>
+        <a href={item.url}>
+          {item.icon ? <img src={item.icon} alt={item.name} /> : <span class="nav__li">{item.name}</span>}
+        </a>
+      </li>
     ))}
   </ul>
   <Links />
@@ -18,19 +20,22 @@ const nav = data.nav
 
 <style lang="sass">
   nav
-    background-color: lightgray
     padding: 1rem
     display: flex
     align-items: center
 
+    img
+      width: 30px
+
     ul
       display: flex
+      align-items: center
       margin-right: auto
 
     li
       list-style: none
 
-    a
+    
       & + *
         margin-left: 1rem
 </style>

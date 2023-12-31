@@ -2,7 +2,8 @@
   "nav": [
     {
       "name": "Home",
-      "url": "/"
+      "url": "/",
+      "icon": "https://res.cloudinary.com/drxro4uha/image/upload/v1704035205/icons8-logitech-50_bcuks8.png"
     },
     {
       "name": "About",
