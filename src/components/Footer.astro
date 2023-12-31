@@ -1,15 +1,24 @@
 ---
 import Links from "../components/Links.astro";
-
+const currentYear = new Date().getFullYear()
 ---
 
 <footer>
-  <p>todo: add footer</p>
+  <p>Let's connect</p>
+  <a href="tel:+15613101404">561-310-1404</a>
+  <a href="mailto: garrett@submurgedcreative.com">garrett@submurgedcreative.com</a>
   <Links />
+  <p>{currentYear} - Garrett Siegel - Front-End Web Developer / Visual Designer</p>
 </footer>
 
 <style lang="sass">
   footer
+    display: flex
+    flex-direction: column
+    align-items: center
     background-color: lightgray
     padding: 1rem
+
+    & > *
+      margin-bottom: 0.5rem
 </style>

@@ -1,7 +1,30 @@
 ---
+import LatestSnippet from "../components/LatestSnippet.astro";
 import Layout from "../layouts/Layout.astro"
+
 ---
 
 <Layout title="Web Development">
-  <h2>WebDev</h2>
+  
+
+  
+  <section class="webdev">
+    <div>
+      <h2>Front-End Web Development</h2>
+
+      
+
+      <LatestSnippet />
+      
+      <p>todo: figma plugin</p>
+      <p>todo: espn websites</p>
+      <p>todo: K&N homepage</p>
+    </div>
+  </section>
 </Layout>
+
+<style lang="sass">
+  p + *
+    margin-top: 1rem
+  
+</style>

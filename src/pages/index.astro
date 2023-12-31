@@ -1,15 +1,57 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import data from '../data/data.json'
+import LatestSnippet from '../components/LatestSnippet.astro';
 const home = data.home
 ---
 
 <Layout title="Home">
-	<h1>{home.h1}</h1>
-	<h2>{home.h2}</h2>
+	<section class="home">
+		<div class="home__start">
+			<img class="headshot" src="https://res.cloudinary.com/drxro4uha/image/upload/v1691984554/kroji-rig-2_alt5tw.gif" alt="">
+			<h1>{home.h1}</h1>
+			<h3>{home.h2}</h3>
+			<h4>Building Seamless User Experiences Through Design and Code</h4>
+		</div>
+		
+
+		<p>👋 Hi, I'm Garrett Siegel. As a Front-End Developer and seasoned Visual Designer, I craft seamless digital experiences that blend visually appealing design aesthetics with technical expertise. Leveraging modern technologies and the latest frameworks, my diverse background in visual design adds a unique layer of storytelling and functionality to my web projects.</p>
+
+		<p>Throughout my career, I've collaborated with organizations of all sizes, including well-known brands, honing a versatile skill set in various settings. I'm an advocate for clean code, Atomic Design, and data-driven decision-making, aiming for scalable and maintainable solutions. Committed to continuous learning and leadership, I adapt and grow in the ever-evolving landscape of web development and design.</p>
+		<LatestSnippet />
+		<p>todo: webdev snippet</p>
+		<p>todo: design snippet</p>
+		<p>todo: motion snippet</p>
+		
+	</section>
+	
 </Layout>
 
 
 
 <style lang="sass">
+	h1
+		font-size: 3.5rem
+		line-height: 0.8
+		text-align: center
+		margin-top: 1rem
+
+	.home
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		&__start
+			height: calc(100svh - 62px)
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+
+	.headshot
+		width: 100%
+		max-width: 300px
+		border-radius: 50%
+	p + *
+		margin-top: 1rem
 </style>

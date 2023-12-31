@@ -20,6 +20,10 @@
     {
       "name": "Design",
       "url": "/design"
+    },
+    {
+      "name": "Motion",
+      "url": "/motion"
     }
   ],
   "links": [
@@ -58,12 +62,23 @@
       "url": "https://twitter.com/garrettDoesCode",
       "icon": "https://res.cloudinary.com/drxro4uha/image/upload/v1703774120/icons8-twitterx-50_ve4jzt.png",
       "alt": "Twitter/X icon"
-    }
-    
-    
+    }    
   ],
   "home": {
     "h1": "Garrett Siegel",
-    "h2": "Front-End Web Developer & Visual Designer"
+    "h2": "Front-End Development & Visual Designer"
+  },
+  "latest": {
+    "snippet": {
+      "title": "NFL Playoff Predictor",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet officia ducimus ullam enim delectus tempora fugiat doloremque ea magnam veniam.",
+      "url": "https://www.espn.com/espn/feature/story/_/id/38686897/nfl-playoff-picture-live-updated-chances-clinch-bracket-projections-race-scenarios",
+      "img": "https://res.cloudinary.com/drxro4uha/image/upload/v1704037022/playoff-predictor-2023_rnp4ic.jpg",
+      "alt": "ESPN NFL Playoff Predictor 2023"
+    },
+    "project": {
+      
+    }
   }
+
 }

@@ -7,11 +7,9 @@ const nav = data.nav
 <nav>
   <ul>
     {nav.map((item) => (
-      <li>
-        <a href={item.url}>
-          {item.icon ? <img src={item.icon} alt={item.name} /> : <span class="nav__li">{item.name}</span>}
-        </a>
-      </li>
+      <a href={item.url}>
+        {item.icon ? <li><img src={item.icon} alt={item.name} /></li> : <li>{item.name}</li>}
+      </a>
     ))}
   </ul>
   <Links />
@@ -52,20 +50,15 @@ const nav = data.nav
     li
       list-style: none
       font-size: 0.9rem
-      font-weight: 700
+      font-weight: 900
       text-transform: uppercase
 
+    a
       & + *
         margin-top: 0.5rem
         @media (min-width: 375px)
           margin-top: 0
           margin-left: 1rem
 
-    a
-      text-decoration: none
-      transition: all 0.2s ease-in-out
-      color: #333
-
-      &:hover
-        color: #555
+    
 </style>
