@@ -1,9 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import data from '../data/data.json'
+const home = data.home
 ---
 
 <Layout title="Home">
-	<h1>Title</h1>
+	<h1>{home.h1}</h1>
+	<h2>{home.h2}</h2>
 </Layout>
 
 
