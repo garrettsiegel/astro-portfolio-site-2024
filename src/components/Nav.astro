@@ -1,5 +1,6 @@
 ---
 import data from '../data/data.json'
+import Links from '../components/Links.astro';
 const nav = data.nav
 ---
 
@@ -11,6 +12,7 @@ const nav = data.nav
       </a>
     ))}
   </ul>
+  <Links />
 </nav>
 
 
@@ -18,9 +20,12 @@ const nav = data.nav
   nav
     background-color: lightgray
     padding: 1rem
+    display: flex
+    align-items: center
 
     ul
       display: flex
+      margin-right: auto
 
     li
       list-style: none

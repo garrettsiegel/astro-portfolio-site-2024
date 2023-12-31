@@ -1,0 +1,39 @@
+---
+import data from '../data/data.json'
+const links = data.links
+---
+
+<div class="links">
+  <ul>
+    {links.map((link) => (
+      <li class="link">
+        <a href={link.url} target="_blank" rel="noopener noreferrer">
+          <img class="link__image" src={link.icon} alt={link.alt} width="30" height="30"/>
+          <span class="link__label" aria-hidden="true">{link.label}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
+
+
+<style lang="sass">
+  .links
+    ul
+      display: flex
+      align-items: center
+      list-style: none
+
+  .link
+    & + *
+      margin-left: 1rem
+
+    &__image
+      max-width: 30px
+      transition: all 0.2s ease-in-out
+      &:hover
+        transform: scale(1.1)
+
+    &__label
+      display: none
+</style>
