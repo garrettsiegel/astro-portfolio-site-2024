@@ -1,4 +1,22 @@
 {
+  "nav": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "About",
+      "url": "/about"
+    },
+    {
+      "name": "WebDev",
+      "url": "/webdev"
+    },
+    {
+      "name": "Design",
+      "url": "/design"
+    }
+  ],
   "home": {
     "h1": "Garrett Siegel",
     "h2": "Front-End Web Developer & Visual Designer"

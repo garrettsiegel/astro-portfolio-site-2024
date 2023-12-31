@@ -1,0 +1,31 @@
+---
+import data from '../data/data.json'
+const nav = data.nav
+---
+
+<nav>
+  <ul>
+    {nav.map((item) => (
+      <a href={item.url}>
+        <li class="nav__li">{item.name}</li>
+      </a>
+    ))}
+  </ul>
+</nav>
+
+
+<style lang="sass">
+  nav
+    background-color: lightgray
+    padding: 1rem
+
+    ul
+      display: flex
+
+    li
+      list-style: none
+
+    a
+      & + *
+        margin-left: 1rem
+</style>
