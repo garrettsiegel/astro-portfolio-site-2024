@@ -8,7 +8,8 @@ const nav = data.nav
   <ul>
     {nav.map((item) => (
       <a href={item.url}>
-        {item.icon ? <li><img src={item.icon} alt={item.name} /></li> : <li>{item.name}</li>}
+        {item.icon ? <li><img src={item.icon} alt={item.name} width="30" height="30"/></li> : <li>{item.name}</li>}
+        <span class="visually-hidden">{item.name}</span>
       </a>
     ))}
   </ul>
