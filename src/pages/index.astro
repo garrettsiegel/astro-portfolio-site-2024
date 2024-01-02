@@ -1,9 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import data from '../data/data.json'
-const home = data.home
 import Card from '../components/Card.astro'
-import LatestCard from '../components/LatestCard.astro';
+import LatestCard from '../components/LatestCard.astro'
+
+const home = {
+	"h1": "Garrett Siegel",
+	"h2": "Front-End Development & Visual Design"
+}
+
+const { h1, h2 } = home
 ---
 
 <Layout title="Home">
@@ -15,8 +20,8 @@ import LatestCard from '../components/LatestCard.astro';
 				Your browser does not support the video tag.
 			</video>
 		
-			<h1>{home.h1}</h1>
-			<h2>{home.h2}</h2>
+			<h1>{h1}</h1>
+			<h2>{h2}</h2>
 			<h3>Building Seamless User Experiences Through Design and Code</h3>
 		</div>
 

@@ -1,7 +1,34 @@
 ---
-import data from '../data/data.json'
-import Links from '../components/Links.astro';
-const nav = data.nav
+import Links from '../components/Links.astro'
+import Gicon from '../components/logos/g-icon.astro'
+
+const nav = [
+  {
+    "name": "Home",
+    "url": "/",
+    "icon": Gicon
+  },
+  {
+    "name": "About",
+    "url": "/about"
+  },
+  {
+    "name": "Latest Project",
+    "url": "/latest"
+  },
+  {
+    "name": "WebDev",
+    "url": "/webdev"
+  },
+  {
+    "name": "Design",
+    "url": "/design"
+  },
+  {
+    "name": "Motion",
+    "url": "/motion"
+  }
+]
 ---
 
 <nav>
@@ -9,7 +36,7 @@ const nav = data.nav
     {nav.map((item) => (
       <li>
         <a href={item.url}>
-          {item.icon ? <img src={item.icon} alt={item.name} width="30" height="30"/> : item.name}
+          {item.icon ? <Gicon /> : item.name}
           <span class="visually-hidden">{item.name}</span>
         </a>
       </li>
@@ -18,7 +45,7 @@ const nav = data.nav
   <Links />
 </nav>
 
-<style lang="sass">
+<style lang="sass" is:global>
   nav
     padding: 1rem
     display: flex
@@ -32,7 +59,7 @@ const nav = data.nav
       flex-direction: row
       align-items: center
 
-    img
+    svg
       width: 30px
 
     ul
