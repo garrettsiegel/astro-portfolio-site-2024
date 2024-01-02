@@ -10,7 +10,11 @@ import LatestCard from '../components/LatestCard.astro';
 	<section class="home">
 
 		<div class="home__start">
-			<img class="headshot" src="https://res.cloudinary.com/drxro4uha/image/upload/v1691984554/kroji-rig-2_alt5tw.gif" alt="" width="300" height="300">
+			<video autoplay loop muted playsinline class="headshot">
+				<source src="https://res.cloudinary.com/drxro4uha/video/upload/v1704223896/ezgif.com-gif-to-mp4-converter_oegvif.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		
 			<h1>{home.h1}</h1>
 			<h3>{home.h2}</h3>
 			<h4>Building Seamless User Experiences Through Design and Code</h4>
@@ -28,7 +32,7 @@ import LatestCard from '../components/LatestCard.astro';
 		<Card
 			title="Front-End Web Development"
 			href="/webdev"
-			image="https://res.cloudinary.com/drxro4uha/image/upload/v1689217637/design-systems_uf7ovv.jpg"
+			image=""
 			alt=""
 			subtitle=""
 			body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus accusantium natus placeat, consequatur sit id, explicabo itaque, beatae autem excepturi. Veritatis itaque possimus sit, asperiores optio animi, nesciunt eos, labore ullam recusandae dolorem molestias. Laborum a, ex maxime suscipit exercitationem nihil iusto? Ea, modi totam adipisci eum aut iure!"
@@ -38,7 +42,7 @@ import LatestCard from '../components/LatestCard.astro';
 		<Card
 			title="Graphic Design"
 			href="/design"
-			image="https://res.cloudinary.com/drxro4uha/image/upload/v1691984722/abstract4_zzkkwq.jpg"
+			image=""
 			alt=""
 			subtitle=""
 			body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus accusantium natus placeat, consequatur sit id, explicabo itaque, beatae autem excepturi. Veritatis itaque possimus sit, asperiores optio animi, nesciunt eos, labore ullam recusandae dolorem molestias. Laborum a, ex maxime suscipit exercitationem nihil iusto? Ea, modi totam adipisci eum aut iure!"
@@ -48,7 +52,7 @@ import LatestCard from '../components/LatestCard.astro';
 		<Card
 			title="Motion Design"
 			href="/motion"
-			image="https://res.cloudinary.com/drxro4uha/image/upload/v1689217044/abstract-expression-min_cc2bul.gif"
+			image=""
 			alt=""
 			subtitle=""
 			body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus accusantium natus placeat, consequatur sit id, explicabo itaque, beatae autem excepturi. Veritatis itaque possimus sit, asperiores optio animi, nesciunt eos, labore ullam recusandae dolorem molestias. Laborum a, ex maxime suscipit exercitationem nihil iusto? Ea, modi totam adipisci eum aut iure!"
@@ -81,9 +85,8 @@ import LatestCard from '../components/LatestCard.astro';
 			justify-content: center
 
 	.headshot
-		width: 100%
-		max-width: 300px
 		border-radius: 50%
+		
 	p + *
 		margin-top: 1rem
 
