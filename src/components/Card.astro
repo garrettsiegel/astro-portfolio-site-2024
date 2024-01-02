@@ -1,0 +1,27 @@
+---
+const { href, title, image, alt, subtitle, body, cta } = Astro.props
+---
+
+<div class="card">
+  {title && <h3>{title}</h3>}
+  {image && <img src={image} alt={alt || 'Image'} />}
+  {subtitle && <h4>{subtitle}</h4>}
+  {body && <p>{body}</p>}
+  {href && cta && <a href={href}>{cta}</a>}
+</div>
+
+<style lang="sass">
+  .card
+    background-color: lightgray
+    padding: 1rem
+    border-radius: 0.5rem
+
+    & + *
+      margin-top: 1rem
+
+    img
+      width: 100%
+      min-height: 300px
+      background-color: gray
+
+</style>

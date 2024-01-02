@@ -1,0 +1,19 @@
+---
+import Card from "./Card.astro"
+import data from "../data/data.json"
+const latestSnippet = data.latest.snippet
+---
+
+<Card
+  title="Latest Project"
+  href="/latest"
+  image={latestSnippet.img}
+  alt={latestSnippet.alt}
+  subtitle={latestSnippet.title}
+  body={latestSnippet.desc}
+  cta="Click to see more"
+/>
+
+<style lang="sass">
+
+</style>

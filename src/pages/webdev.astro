@@ -1,6 +1,8 @@
 ---
-import LatestSnippet from "../components/LatestSnippet.astro";
 import Layout from "../layouts/Layout.astro"
+import Card from "../components/Card.astro"
+import LatestCard from "../components/LatestCard.astro";
+
 
 ---
 
@@ -11,19 +13,59 @@ import Layout from "../layouts/Layout.astro"
   <section class="webdev">
     <div>
       <h2>Front-End Web Development</h2>
-
+      <div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio magni, soluta consectetur est suscipit in eos dolorum ex tenetur debitis optio culpa facilis mollitia cum aliquid omnis laborum, similique maxime iure porro nemo dicta consequuntur minima voluptas? Nobis quam omnis vero rem dolorum, eaque autem ratione repudiandae dolores eligendi nihil!</p>
       
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio magni, soluta consectetur est suscipit in eos dolorum ex tenetur debitis optio culpa facilis mollitia cum aliquid omnis laborum, similique maxime iure porro nemo dicta consequuntur minima voluptas? Nobis quam omnis vero rem dolorum, eaque autem ratione repudiandae dolores eligendi nihil!</p>
+  
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio magni, soluta consectetur est suscipit in eos dolorum ex tenetur debitis optio culpa facilis mollitia cum aliquid omnis laborum, similique maxime iure porro nemo dicta consequuntur minima voluptas? Nobis quam omnis vero rem dolorum, eaque autem ratione repudiandae dolores eligendi nihil!</p>
+  
+      </div>
 
-      <LatestSnippet />
+      <div>
+        <p>TODO: add tech stack icons</p>
+      </div>
       
-      <p>todo: figma plugin</p>
-      <p>todo: espn websites</p>
-      <p>todo: K&N homepage</p>
+      <LatestCard />
+      
+      <Card
+        title="Figma Plugin"
+				href="https://www.figma.com/community/plugin/1303474998141560446/text2css"
+        image=""
+        alt=""
+        subtitle="Text2CSS Figma Plugin"
+				body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus accusantium natus placeat, consequatur sit id, explicabo itaque, beatae autem excepturi. Veritatis itaque possimus sit, asperiores optio animi, nesciunt eos, labore ullam recusandae dolorem molestias. Laborum a, ex maxime suscipit exercitationem nihil iusto? Ea, modi totam adipisci eum aut iure!"
+        cta="View on Figma"
+			/>
+
+      <Card
+        title="ESPN Projects"
+				href="/espn-work"
+        image=""
+        alt=""
+        subtitle=""
+				body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus accusantium natus placeat, consequatur sit id, explicabo itaque, beatae autem excepturi. Veritatis itaque possimus sit, asperiores optio animi, nesciunt eos, labore ullam recusandae dolorem molestias. Laborum a, ex maxime suscipit exercitationem nihil iusto? Ea, modi totam adipisci eum aut iure!"
+        cta="View more"
+			/>
+
+      <Card
+        title="K&N Engineering Work"
+				href="/kandn-work"
+        image=""
+        alt=""
+        subtitle=""
+				body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus accusantium natus placeat, consequatur sit id, explicabo itaque, beatae autem excepturi. Veritatis itaque possimus sit, asperiores optio animi, nesciunt eos, labore ullam recusandae dolorem molestias. Laborum a, ex maxime suscipit exercitationem nihil iusto? Ea, modi totam adipisci eum aut iure!"
+        cta="View more"
+			/>
+
     </div>
   </section>
 </Layout>
 
 <style lang="sass">
+  div + *
+    margin-top: 1rem
+
   p + *
     margin-top: 1rem
   
