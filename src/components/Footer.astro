@@ -4,11 +4,12 @@ const currentYear = new Date().getFullYear()
 ---
 
 <footer>
-  <p>Let's connect</p>
+  <h4>Let's connect</h4>
   <a href="tel:+15613101404">561-310-1404</a>
   <a href="mailto: garrett@submurgedcreative.com">garrett@submurgedcreative.com</a>
   <Links />
-  <p>{currentYear} - Garrett Siegel - Front-End Web Developer / Visual Designer</p>
+  <p>&copy; {currentYear} Garrett Siegel. All Rights Reserved.<br>Front-End Web Developer & Visual Designer</p>
+
 </footer>
 
 <style lang="sass">
@@ -21,4 +22,13 @@ const currentYear = new Date().getFullYear()
 
     & > *
       margin-bottom: 0.5rem
+
+    h4
+      font-size: 1.25rem
+      font-family: syne, sans-serif
+      font-weight: 800
+      text-transform: uppercase
+
+    p
+      font-size: 0.8rem
 </style>

@@ -52,6 +52,7 @@ const links = [
       <li class="link">
         <a href={link.url} target="_blank" aria-label="Descriptive text about the link" rel="noopener noreferrer">
           <link.icon />
+          <span class="visually-hidden">{link.alt}</span>
         </a>
       </li>
     ))}
@@ -70,12 +71,19 @@ const links = [
     & + *
       margin-left: 1rem
 
-    svg
-      max-width: 30px
-      transition: all 0.2s ease-in-out
-      &:hover
-        transform: scale(1.1)
+    
 
     &__label
       display: none
+
+  .visually-hidden
+    position: absolute
+    width: 1px
+    height: 1px
+    margin: -1px
+    padding: 0
+    overflow: hidden
+    clip: rect(0, 0, 0, 0)
+    border: 0
+    white-space: nowrap
 </style>
