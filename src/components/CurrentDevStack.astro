@@ -1,0 +1,97 @@
+---
+import HTMLIcon from '../components/logos/html.astro'
+import CSSIcon from '../components/logos/css.astro'
+import JSIcon from '../components/logos/js.astro'
+import ReactIcon from '../components/logos/react.astro'
+import NextIcon from '../components/logos/next.astro'
+import AstroIcon from '../components/logos/astro.astro'
+import GSAPIcon from '../components/logos/gsap.astro'
+import HugoIcon from '../components/logos/hugo.astro'
+import HandlebarsIcon from '../components/logos/handlebars.astro'
+import SASSIcon from '../components/logos/sass.astro'
+import TailwindIcon from '../components/logos/tailwind.astro'
+import ViteIcon from '../components/logos/vite.astro'
+---
+
+<div class="module current-tech">
+  <h2 class="current-tech__headline">Current Front End Technologies</h2> 
+  <div class="current-tech__skills">
+    <div class="current-tech__skill">
+      <HTMLIcon />
+    </div>
+    <div class="current-tech__skill">
+      <CSSIcon />
+    </div>
+    <div class="current-tech__skill">
+      <JSIcon />
+    </div>
+    <div class="current-tech__skill">
+      <ReactIcon />
+    </div>
+    <div class="current-tech__skill">
+      <NextIcon />
+    </div>
+    <div class="current-tech__skill">
+      <AstroIcon />
+    </div>
+    <div class="current-tech__skill">
+      <GSAPIcon />
+    </div>
+    <div class="current-tech__skill">
+      <HugoIcon />
+    </div>
+    <div class="current-tech__skill">
+      <HandlebarsIcon />
+    </div>
+    <div class="current-tech__skill">
+      <SASSIcon />
+    </div>
+    <div class="current-tech__skill">
+      <TailwindIcon />
+    </div>
+    <div class="current-tech__skill">
+      <ViteIcon />
+    </div>
+    
+  </div>
+</div>
+
+<style lang="sass" is:global>
+  .current-tech
+    margin-block: 1rem
+
+    &__headline
+      font-size: 1.25rem
+      text-align: center
+      max-width: 80%
+      margin-inline: auto
+
+      @media (min-width: 768px)
+        font-size: 1.5rem
+        max-width: 100%
+
+    &__skills
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      grid-gap: 1rem
+      margin-top: 1rem
+      padding-inline: 1rem
+
+      @media (min-width: 768px)
+        grid-template-columns: repeat(4, 1fr)
+
+      @media (min-width: 1024px)
+        grid-template-columns: repeat(6, 1fr)
+        padding-inline: 0
+
+    &__skill
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      padding-top: 0.5rem
+      border-radius: 0.5rem
+
+      svg
+        width: 50px
+</style>

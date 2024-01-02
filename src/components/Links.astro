@@ -1,6 +1,49 @@
 ---
-import data from '../data/data.json'
-const links = data.links
+import GithubIcon from '../components/logos/github.astro'
+import LinkedInIcon from '../components/logos/linkedin.astro'
+import CodepenIcon from '../components/logos/codepen.astro'
+import BehanceIcon from '../components/logos/behance.astro'
+import UpworkIcon from '../components/logos/upwork.astro'
+import TwitterIcon from '../components/logos/twitter.astro'
+
+const links = [
+    {
+      "label": "Github",
+      "url": "https://github.com/garrettsiegel",
+      "icon": GithubIcon,
+      "alt": "Github icon"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/garrettsiegel/",
+      "icon": LinkedInIcon,
+      "alt": "LinkedIn icon"
+    },
+    {
+      "label": "Codepen",
+      "url": "https://codepen.io/garrettsiegel/pens/public",
+      "icon": CodepenIcon,
+      "alt": "Codepen icon"
+    },
+    {
+      "label": "Behance",
+      "url": "https://www.behance.net/gsiegel",
+      "icon": BehanceIcon,
+      "alt": "Behance icon"
+    },
+    {
+      "label": "Upwork",
+      "url": "https://www.upwork.com/freelancers/garrettsubmurged",
+      "icon": UpworkIcon,
+      "alt": "Upwork icon"
+    },
+    {
+      "label": "Twitter / X",
+      "url": "https://twitter.com/garrettDoesCode",
+      "icon": TwitterIcon,
+      "alt": "Twitter/X icon"
+    }    
+  ]
 ---
 
 <div class="links">
@@ -8,8 +51,7 @@ const links = data.links
     {links.map((link) => (
       <li class="link">
         <a href={link.url} target="_blank" aria-label="Descriptive text about the link" rel="noopener noreferrer">
-          <img class="link__image" src={link.icon} alt={link.alt} width="30" height="30"/>
-          <span class="visually-hidden">{link.alt}</span>
+          <link.icon />
         </a>
       </li>
     ))}
@@ -17,10 +59,7 @@ const links = data.links
 </div>
 
 
-<style lang="sass">
-  
-
-
+<style lang="sass" is:global>
   .links
     ul
       display: flex
@@ -31,7 +70,7 @@ const links = data.links
     & + *
       margin-left: 1rem
 
-    &__image
+    svg
       max-width: 30px
       transition: all 0.2s ease-in-out
       &:hover

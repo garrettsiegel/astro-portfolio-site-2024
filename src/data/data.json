@@ -26,44 +26,6 @@
       "url": "/motion"
     }
   ],
-  "links": [
-    {
-      "label": "Github",
-      "url": "https://github.com/garrettsiegel",
-      "icon": "https://res.cloudinary.com/drxro4uha/image/upload/v1703774119/icons8-github-50_b5tcuq.png",
-      "alt": "Github icon"
-    },
-    {
-      "label": "LinkedIn",
-      "url": "https://www.linkedin.com/in/garrettsiegel/",
-      "icon": "https://res.cloudinary.com/drxro4uha/image/upload/v1703774119/icons8-linkedin-50_nefrgt.png",
-      "alt": "LinkedIn icon"
-    },
-    {
-      "label": "Codepen",
-      "url": "https://codepen.io/garrettsiegel/pens/public",
-      "icon": "https://res.cloudinary.com/drxro4uha/image/upload/v1703774119/icons8-codepen-50_pdpjvg.png",
-      "alt": "Codepen icon"
-    },
-    {
-      "label": "Behance",
-      "url": "https://www.behance.net/gsiegel",
-      "icon": "https://res.cloudinary.com/drxro4uha/image/upload/v1703774119/icons8-behance-50_mgdefx.png",
-      "alt": "Behance icon"
-    },
-    {
-      "label": "Upwork",
-      "url": "https://www.upwork.com/freelancers/garrettsubmurged",
-      "icon": "https://res.cloudinary.com/drxro4uha/image/upload/v1703774120/icons8-upwork-50_sjyfi6.png",
-      "alt": "Upwork icon"
-    },
-    {
-      "label": "Twitter / X",
-      "url": "https://twitter.com/garrettDoesCode",
-      "icon": "https://res.cloudinary.com/drxro4uha/image/upload/v1703774120/icons8-twitterx-50_ve4jzt.png",
-      "alt": "Twitter/X icon"
-    }    
-  ],
   "home": {
     "h1": "Garrett Siegel",
     "h2": "Front-End Development & Visual Design"
