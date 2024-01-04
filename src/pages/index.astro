@@ -25,7 +25,7 @@ const { h1, h2 } = home
 			<h3>Building Seamless User Experiences Through Design and Code</h3>
 		</div>
 
-		<div>
+		<div class="home__intro">
 			<p>👋 Hi, I'm Garrett Siegel. As a Front-End Developer and seasoned Visual Designer, I craft seamless digital experiences that blend visually appealing design aesthetics with technical expertise. Leveraging modern technologies and the latest frameworks, my diverse background in visual design adds a unique layer of storytelling and functionality to my web projects.</p>
 			<p>Throughout my career, I've collaborated with organizations of all sizes, including well-known brands, honing a versatile skill set in various settings. I'm an advocate for clean code, Atomic Design, and data-driven decision-making, aiming for scalable and maintainable solutions. Committed to continuous learning and leadership, I adapt and grow in the ever-evolving landscape of web development and design.</p>
 		</div>
@@ -88,11 +88,15 @@ const { h1, h2 } = home
 		align-items: center
 
 		&__start
-			height: calc(100svh - 62px)
+			// height: calc(100svh - 62px)
 			display: flex
 			flex-direction: column
 			align-items: center
 			justify-content: center
+
+		&__intro
+			margin-top: 3rem
+			margin-bottom: 3rem
 
 	.headshot
 		border-radius: 50%
@@ -109,6 +113,6 @@ const { h1, h2 } = home
 			height: 300px
 			background-color: gray
 
-	div + *
-		margin-top: 1rem
+	// div + *
+	// 	margin-top: 1rem
 </style>
