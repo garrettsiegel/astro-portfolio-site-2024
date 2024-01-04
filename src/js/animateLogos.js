@@ -19,8 +19,8 @@ export class AnimateLogos {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: this.webdevSkills,
-        start: 'top 50%',
-        end: 'bottom 35%',
+        start: 'top 80%',
+        end: 'bottom 75%',
         scrub: 1,
         // markers: true
       }
