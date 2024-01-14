@@ -23,7 +23,11 @@ import Card from "../components/Card.astro"
 			cta="Explore My Digital Design Journey at Kroger"
 		/>
 
-    <div class="design__grid">
+    <div class="design__carousel">
+      <p>todo: image carousel with descriptions</p>
+    </div>
+
+    <!-- <div class="design__grid">
       <div class="design__grid-item">
         <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1691984722/abstract4_zzkkwq.jpg" alt="">
       </div>
@@ -61,7 +65,7 @@ import Card from "../components/Card.astro"
         <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1691984722/abstract4_zzkkwq.jpg" alt="">
       </div>
       
-    </div>
+    </div> -->
 
 
 
@@ -71,20 +75,7 @@ import Card from "../components/Card.astro"
 
 <style lang="sass">
   .design
-    .design__grid
-      display: grid
-      grid-template-columns: 1fr 1fr 1fr
-      grid-gap: 1rem
-      margin-block: 1rem
-
-    .design__grid-item
-      background: #eee
-      height: 200px
-      border-radius: 0.25rem
-      
-      img
-        width: 100%
-        height: 100%
-        object-fit: cover
-        border-radius: 0.25rem
+    &__carousel
+      background-color: orange
+      margin-block: 2rem
 </style>
