@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro'
 import Card from '../components/Card.astro'
 import LatestCard from '../components/LatestCard.astro'
 import Companies from "../components/Companies.astro"
+import Carousel from '../components/Carousel.astro'
 
 
 const home = {
@@ -14,6 +15,9 @@ const { h1, h2 } = home
 ---
 
 <Layout title="Home">
+
+	<Carousel />
+
 	<section class="home">
 
 		<div class="home__start">

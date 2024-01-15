@@ -1,0 +1,118 @@
+---
+
+---
+
+<div class="carousel">
+
+  <div class="controls">
+    <div class="controls--prev" aria-label="Previous slide">&lt;</div>
+    <div class="controls--next" aria-label="Next slide">&gt;</div>
+  </div>
+
+  <div class="media">
+    <div class="media--item">
+      <img src="https://picsum.photos/800/600?image=1" alt="Image 1" />
+      <h3>Title 1</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolore minus, assumenda accusamus ea dolores illo velit incidunt obcaecati porro.</p>
+    </div>
+
+    <div class="media--item">
+      <img src="https://picsum.photos/800/600?image=2" alt="Image 2" />
+      <h3>Title 2</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolore minus, assumenda accusamus ea dolores illo velit incidunt obcaecati porro.</p>
+    </div>
+
+    <div class="media--item">
+      <img src="https://picsum.photos/800/600?image=3" alt="Image 3" />
+      <h3>Title 3</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolore minus, assumenda accusamus ea dolores illo velit incidunt obcaecati porro.</p>
+    </div>
+  </div>
+
+</div>
+
+
+<script>
+  const carousel = document.querySelector(".carousel")
+  const prev = carousel.querySelector(".controls--prev")
+  const next = carousel.querySelector(".controls--next")
+  const mediaItems = carousel.querySelectorAll(".media--item")
+
+  if (!carousel || !prev || !next || !mediaItems) {
+    console.error("One or more elements not found. Check your HTML structure.")
+  } else {
+    const mediaItemsLength = mediaItems.length
+    let currentSlide = 0
+
+    const itemsLoop = () => {
+      const translateX = `translateX(-${currentSlide * 100}%)`
+      mediaItems.forEach((item) => {
+        const itemElement = item as HTMLElement
+        itemElement.style.transform = translateX
+      })
+    }
+
+    prev.addEventListener("click", () => {
+      currentSlide = (currentSlide - 1 + mediaItemsLength) % mediaItemsLength
+      itemsLoop()
+    })
+
+    next.addEventListener("click", () => {
+      currentSlide = (currentSlide + 1) % mediaItemsLength
+      itemsLoop()
+    })
+
+    itemsLoop()
+  }
+</script>
+
+
+<style lang="sass">
+  .carousel
+    max-width: 700px
+    margin-inline: auto
+    // background-color: orange
+    position: relative
+    height: 500px
+    margin-block: 2rem
+
+  .media
+    position: relative
+    top: 0
+    display: flex
+    overflow-x: hidden
+
+    &--item
+      flex: 0 0 100%
+      // transition: transform 0.2s ease-in-out
+
+      img
+        width: 100%
+        height: 400px
+
+        object-fit: cover
+        object-position: center
+
+
+  .controls
+    width: 100%
+    height: 400px
+    position: absolute
+    top: 0
+    z-index: 2
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    &--prev,
+    &--next
+      background-color: white
+      padding: 0.5rem
+      cursor: pointer
+
+      &:hover
+        background-color: black
+
+        color: white
+
+</style>
