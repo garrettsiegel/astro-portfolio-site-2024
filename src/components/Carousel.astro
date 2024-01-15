@@ -9,13 +9,15 @@ const { data } = Astro.props
       <div class="controls--next" aria-label="Next slide">&gt;</div>
     </div>
 
-    {data.map((item) => (
+    {data.map(({ src, alt, title, desc, linkText, link }) => (
       <div class="media--item">
-        <img src={item.src} alt={item.alt} />
-        <h3>{item.title}</h3>
-        <p>{item.desc}</p>
+        {src && alt && <img src={src} alt={alt} />}
+        {title && <h3>{title}</h3>}
+        {desc && <p>{desc}</p>}
+        {linkText && link && <a href={link} class="link" target="_blank">{linkText}</a>}
       </div>
     ))}
+
   </div>
 </div>
 
@@ -51,15 +53,17 @@ const { data } = Astro.props
 </script>
 
 
+
 <style lang="sass">
   .carousel
     background-color: lightgray
-    max-width: 700px
+    // max-width: 700px
     margin-inline: auto
     position: relative
     margin-block: 2rem
     padding: 1rem
     border-radius: 0.5rem
+    
 
   .media
     position: relative
@@ -77,7 +81,6 @@ const { data } = Astro.props
         height: 400px
         border-radius: 0.25rem
         object-fit: cover
-        object-position: center
 
   .controls
     max-width: 100%

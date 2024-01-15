@@ -3,7 +3,8 @@ import Layout from "../layouts/Layout.astro"
 import Card from "../components/Card.astro"
 import LatestCard from "../components/LatestCard.astro";
 import CurrentDevStack from "../components/CurrentDevStack.astro";
-
+import Carousel from "../components/Carousel.astro";
+import ESPNcarousel from '../data/ESPNcarousel.js'
 
 ---
 
@@ -23,9 +24,13 @@ import CurrentDevStack from "../components/CurrentDevStack.astro";
       
       
       <LatestCard />
+
+      <h3>ESPN Projects</h3>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio magni, soluta consectetur est suscipit in eos dolorum ex tenetur debitis optio culpa facilis mollitia cum aliquid omnis laborum, similique maxime iure porro nemo dicta consequuntur minima voluptas? Nobis quam omnis vero rem dolorum, eaque autem ratione repudiandae dolores eligendi nihil!</p>
+      <Carousel data={ESPNcarousel}/>
+
   
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio magni, soluta consectetur est suscipit in eos dolorum ex tenetur debitis optio culpa facilis mollitia cum aliquid omnis laborum, similique maxime iure porro nemo dicta consequuntur minima voluptas? Nobis quam omnis vero rem dolorum, eaque autem ratione repudiandae dolores eligendi nihil!</p>
+      <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio magni, soluta consectetur est suscipit in eos dolorum ex tenetur debitis optio culpa facilis mollitia cum aliquid omnis laborum, similique maxime iure porro nemo dicta consequuntur minima voluptas? Nobis quam omnis vero rem dolorum, eaque autem ratione repudiandae dolores eligendi nihil!</p> -->
   
       <CurrentDevStack />
       <Card
@@ -38,7 +43,7 @@ import CurrentDevStack from "../components/CurrentDevStack.astro";
         cta="View on Figma"
 			/>
 
-      <Card
+      <!-- <Card
         title="ESPN Projects"
 				href="/espn-work"
         image=""
@@ -46,7 +51,7 @@ import CurrentDevStack from "../components/CurrentDevStack.astro";
         subtitle=""
 				body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus accusantium natus placeat, consequatur sit id, explicabo itaque, beatae autem excepturi. Veritatis itaque possimus sit, asperiores optio animi, nesciunt eos, labore ullam recusandae dolorem molestias. Laborum a, ex maxime suscipit exercitationem nihil iusto? Ea, modi totam adipisci eum aut iure!"
         cta="View more"
-			/>
+			/> -->
 
       <Card
         title="K&N Engineering Work"

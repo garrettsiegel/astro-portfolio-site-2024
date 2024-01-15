@@ -1,11 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
+// import Carousel from "../components/Carousel.astro";
+// import ESPNcarousel from '../data/ESPNcarousel.js'
+
 ---
 
 <Layout title="ESPN Projects">
   <div class="espn">
     <h2>ESPN Projects</h2>
+    <!-- <Carousel data={ESPNcarousel}/> -->
   </div>
 </Layout>
 
 
+<style lang="sass">
+  .espn
+    padding-inline: 1rem
+    max-width: 1000px
+    margin-inline: auto
+
+    @media (min-width: 768px)
+      padding-inline: 0
+</style>../data/ESPNcarousel.js
