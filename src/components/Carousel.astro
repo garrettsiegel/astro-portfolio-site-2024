@@ -55,6 +55,8 @@ const { data } = Astro.props
 
 
 <style lang="sass">
+  @import '../css/mixins.sass'
+
   .carousel
     background-color: lightgray
     // max-width: 700px
@@ -68,7 +70,7 @@ const { data } = Astro.props
   .media
     position: relative
     top: 0
-    display: flex
+    +flex
     overflow-x: hidden
     width: 100%
 
@@ -93,13 +95,13 @@ const { data } = Astro.props
     justify-content: space-between
     align-items: center
     
-    &--prev
-      border-top-right-radius: 0.5rem
-      border-bottom-right-radius: 0.5rem
+    // &--prev
+    //   border-top-right-radius: 0.5rem
+    //   border-bottom-right-radius: 0.5rem
 
-    &--next
-      border-top-left-radius: 0.5rem
-      border-bottom-left-radius: 0.5rem
+    // &--next
+    //   border-top-left-radius: 0.5rem
+    //   border-bottom-left-radius: 0.5rem
 
     &--prev,
     &--next
@@ -107,15 +109,16 @@ const { data } = Astro.props
       padding: 0.75rem
       cursor: pointer
       font-weight: 900
-      background-color: #00000075
+      background-color: #00000060
       color: #fff
       transition: background-color 0.2s ease-in-out
-      display: flex
-      justify-content: center
-      align-items: center
+      // display: flex
+      // justify-content: center
+      // align-items: center
       user-select: none
+      +flex($justify: center, $align: center)
 
       &:hover
-        background-color: black
+        background-color: #00000095
         color: white
 </style>
