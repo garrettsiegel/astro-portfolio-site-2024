@@ -1,31 +1,55 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Page from '../layouts/Page.astro'
 import Card from '../components/Card.astro'
 import LatestCard from '../components/LatestCard.astro'
 import Companies from "../components/Companies.astro"
 
-
 const home = {
-	"h1": "Garrett Siegel",
-	"h2": "Front-End Development & Visual Design"
+	h1: "Garrett Siegel",
+	h2: "Front-End Development & Visual Design",
+	h3: "Building Seamless User Experiences Through Design and Code"
 }
 
-const { h1, h2 } = home
+const { h1, h2, h3 } = home
+
+
 ---
 
-<Layout title="Home">
+<script>
+	let sanityData
+
+	fetch('https://1onngx25.api.sanity.io/v2022-03-07/data/query/production?query=*%5B%5D&perspective=published')
+			.then(response => response.json())
+			.then(data => {
+					sanityData = data
+					processSanityData(sanityData)
+			})
+			.catch(error => console.error('Error fetching data:', error))
+
+	function processSanityData(data) {
+		console.log('garrett', data.result[0].name);
+		const homeStart = document.querySelector('.home__start')
+		// const h2 = document.createElement('h2');
+		// h2.innerHTML = data.result[0].name;
+		// homeStart.appendChild(h2);
+	}
+</script>
+
+
+
+<Page title="Home">
 
 	<section class="home">
 
 		<div class="home__start">
-			<!-- <video autoplay loop muted playsinline class="headshot">
+			<video autoplay loop muted playsinline class="headshot">
 				<source src="https://res.cloudinary.com/drxro4uha/video/upload/v1704223896/ezgif.com-gif-to-mp4-converter_oegvif.mp4" type="video/mp4">
 				Your browser does not support the video tag.
-			</video> -->
+			</video>
 		
 			<h1>{h1}</h1>
 			<h2>{h2}</h2>
-			<h3>Building Seamless User Experiences Through Design and Code</h3>
+			<h3>{h3}</h3>
 		</div>
 
 		<div class="home__intro">
@@ -40,7 +64,7 @@ const { h1, h2 } = home
 		<Card
 			title="Front-End Web Development"
 			href="/webdev"
-			image="https://res.cloudinary.com/drxro4uha/image/upload/v1704768788/Screenshot_2024-01-08_at_9.52.31_PM_u0addw.png"
+			image=""
 			alt="Screenshot of code in a VS Code editor"
 			subtitle=""
 			body="Explore the unique blend of design and development in my Front End Developer portfolio. Merging timeless design principles with a robust grasp of both cutting-edge and classic coding, including Vanilla JS, I create distinct digital experiences. Click here to journey through my work with design systems, dynamic coding skills, and experimentation with the newest frameworks."
@@ -70,7 +94,7 @@ const { h1, h2 } = home
 		
 	</section>
 	
-</Layout>
+</Page>
 
 
 
