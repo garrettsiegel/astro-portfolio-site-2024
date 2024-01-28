@@ -28,7 +28,7 @@
   </ul>
 </div>
 
-
+<!-- 
 <style>
   .links ul {
     display: flex;
@@ -54,4 +54,25 @@
     padding: 0;
     border: 0;
   }
+</style> -->
+
+<style lang="sass">
+  .links 
+    ul 
+      display: flex 
+      align-items: center 
+      list-style: none 
+  .link 
+    width: 30px 
+    & + * 
+      margin-left: 1rem 
+  .is-hidden 
+    position: absolute 
+    overflow: hidden 
+    clip: rect(0 0 0 0) 
+    height: 0px 
+    width: 0px 
+    margin: -1px 
+    padding: 0 
+    border: 0
 </style>
