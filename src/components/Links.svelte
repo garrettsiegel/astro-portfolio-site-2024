@@ -37,7 +37,7 @@
   }
 
   .link {
-    width: 30px
+    width: 30px;
   }
 
   .link + * {

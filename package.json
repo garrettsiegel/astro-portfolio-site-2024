@@ -1,7 +1,7 @@
 {
-  "name": "my-astro-project-using-bun",
+  "name": "garrettsiegel",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,10 +11,6 @@
   },
   "dependencies": {
     "@astrojs/svelte": "^5.0.3",
-    "astro": "^4.1.0",
-    "gsap": "^3.12.4"
-  },
-  "devDependencies": {
-    "sass": "^1.69.7"
+    "astro": "^4.2.6"
   }
 }
