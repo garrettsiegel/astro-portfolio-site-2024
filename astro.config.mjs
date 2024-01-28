@@ -1,13 +1,7 @@
-import { defineConfig } from "astro/config";
-import partytown from "@astrojs/partytown";
+import { defineConfig } from 'astro/config';
+import svelte from '@astrojs/svelte';
 
 export default defineConfig({
-  integrations: [
-    partytown({
-      // Adds dataLayer.push as a forwarding-event.
-      config: {
-        forward: ["dataLayer.push"],
-      },
-    }),
-  ],
+  // ...
+  integrations: [svelte()],
 });
