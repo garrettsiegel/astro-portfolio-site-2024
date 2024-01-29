@@ -23,7 +23,7 @@ export class AnimateLogos {
         start: 'top 80%',
         end: 'bottom 75%',
         scrub: 1,
-        markers: true
+        // markers: true
       }
     })
 

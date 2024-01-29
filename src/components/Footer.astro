@@ -1,0 +1,27 @@
+---
+var currentYear = new Date().getFullYear()
+---
+
+<footer>
+  <p>&copy; {currentYear} | <a href="mailto:garrett@garrettsiegel.com">Garrett Siegel</a>. All rights reserved.</p>
+</footer>
+
+<style lang="sass">
+  @import '../css/mixins.sass'
+
+  footer
+    padding: 1rem
+    +flex($direction: column, $justify: center, $align: center)
+    background-color: $color-slate-gray
+
+    p, a
+      color: $color-white
+      font-size: 0.8rem
+      text-align: center
+      +from(xs)
+        font-size: 1rem
+
+    a
+      font-weight: 500
+      
+</style>

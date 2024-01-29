@@ -1,0 +1,81 @@
+<div class="design__header">
+  <h2>Design</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus veritatis cumque itaque tenetur, voluptas quisquam in ex ipsa modi officiis nihil dolor dolore voluptates illo autem, quia iusto ea adipisci exercitationem, accusamus sed? Repudiandae nihil nemo saepe nesciunt assumenda earum labore explicabo, iste atque quibusdam blanditiis, modi rem aspernatur magni.</p>
+</div>
+
+<div class="design">
+  <div class="div1">
+    <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1704861823/vitacost-email-mockup_draft1_kavy9b.jpg" alt="">
+  </div>
+  <div class="div2">
+    <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1689217044/abstract-expression-min_cc2bul.gif" alt="">
+  </div>
+  <div class="div3">
+    <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1689225876/letterb-animation_so62ee.gif" alt="">
+  </div>
+  <div class="div4">
+    <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1689217637/design-systems_uf7ovv.jpg" alt="">
+  </div>
+  <div class="div5">
+    <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1689224972/acura_bgklu0.jpg" alt="">
+  </div>
+  <div class="div6">
+    <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1691984706/Kobe_swayqc.jpg" alt="">
+  </div>
+</div>
+
+<style lang="sass">
+  @import '../css/mixins.sass'
+
+  .design__header
+    background-color: $color-lavender-pink
+    padding: 2rem
+    margin-top: 3rem
+
+.design 
+  height: 150vh
+  // margin-top: 1rem
+
+
+  +from(s)
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+    grid-template-rows: repeat(6, 1fr)
+    grid-column-gap: 0px
+    grid-row-gap: 0px
+    height: 75vh
+  
+  & > * 
+    background: #eee
+    border: 1px solid $color-black
+    +flex($align: center, $justify: center)
+    position: relative
+    height: calc(150vh / 6)
+
+    +from(s)
+      height: 100%
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  
+  .div1
+    grid-area: 1 / 1 / 5 / 3
+    img
+      object-position: 0 0
+  .div2
+    grid-area: 5 / 1 / 7 / 3
+  .div3
+    grid-area: 1 / 3 / 4 / 5
+  .div4
+    grid-area: 4 / 3 / 7 / 5
+  .div5
+    grid-area: 1 / 5 / 4 / 7
+  .div6
+    grid-area: 4 / 5 / 7 / 7
+    img
+      object-position: 0 0
+</style>
+
+  
