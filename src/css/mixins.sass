@@ -1,0 +1,44 @@
+$color-white: #ffffff
+$color-black: #000000
+
+$color-tiffany-blue: #8CDFD6
+$color-rich-black: #031927
+$color-slate-gray: #6E7E85
+$color-cyclamen: #ff729f
+$color-lavender-pink: #F0A6CA
+
+  
+$breakpoints: ("xs": 500px, "s": 780px, "m": 1000px, "l": 1300px)
+
+// Map breakpoints
+@function breakpoint($b)
+  @return map-get($breakpoints, $b)
+
+=from($b)
+  @media screen and (min-width: breakpoint($b))
+    @content
+
+=upto($b)
+  @media screen and (max-width: breakpoint($b) - 1px)
+    @content
+  
+=flex($direction: row, $justify: flex-start, $align: flex-start)
+  display: flex
+  flex-direction: $direction
+  justify-content: $justify
+  align-items: $align
+
+=max-width($width)
+  max-width: $width
+  width: 100%
+
+=button-reset
+  appearance: none
+  border: 0
+  outline: none
+  background-color: transparent
+  cursor: pointer
+  padding: 0
+
+=ease-transition
+  transition: all 0.3s ease-in-out

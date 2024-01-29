@@ -1,0 +1,71 @@
+---
+
+import Links from '../components/Links.svelte'
+
+---
+<div class="intro">
+
+  <div class="title">
+    <h1>Garrett Siegel</h1>
+    <h2>Creative Developer</h2>
+    <hr>
+    <Links />
+  </div>
+
+  <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1691984722/abstract4_zzkkwq.jpg" alt="">
+
+  <!-- <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1706469680/garrett-siegel-dev_zctity.jpg" alt=""> -->
+  
+  
+</div>
+
+
+<style lang="sass">
+  @import '../css/mixins.sass'
+  .intro
+    height: 100svh
+    position: relative
+    +flex($direction: column, $justify: center, $align: center)
+
+  .title
+    color: white
+    position: absolute
+    bottom: 0
+    padding: 1rem
+    z-index: 1
+
+    h1
+      font-size: 2rem
+      line-height: 0.8
+
+      +from(xs)
+        font-size: 2.5rem
+
+    h2
+      font-size: 1rem
+      line-height: 0.8
+      margin-top: 0.5rem
+
+      +from(xs)
+        font-size: 1.5rem
+
+
+
+    hr
+      width: 70%
+      border: 1px solid white
+      margin-top: 0.75rem
+
+  img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: bottom
+    z-index: 0
+
+  
+
+</style>
