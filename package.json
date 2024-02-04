@@ -9,10 +9,10 @@
     "preview": "astro preview",
     "astro": "astro",
     "commit": ""
-
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
+    "@astrojs/partytown": "^2.0.4",
     "@astrojs/svelte": "^5.0.3",
     "astro": "^4.2.6",
     "gsap": "^3.12.5",
