@@ -1,33 +1,36 @@
 <div class="webdev">
 
   <div class="title">
-    <h2>Latest Web Development</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, quisquam?</p>
+    <div class="title-container">
+      <h2>Latest Web Development Highlights</h2>
+      <p>Below are highlights from my recent web development projects, showcasing a range of skills from responsive design to dynamic web applications. Each project reflects my commitment to innovative solutions and user-centric experiences.</p>
+    </div>
+    
   </div>
 
   <div class="flex">
 
     <div class="flex-item item-1 expanded">
       <div class="info">
-        <h3>Live NFL Playoff Picture Updates (2023)</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum inventore aperiam cumque unde placeat impedit. Ullam, aliquam eligendi. Dolorum aliquam ad animi, doloremque at necessitatibus!</p>
-        <a href="https://www.espn.com/espn/feature/story/_/id/38686897/nfl-playoff-picture-live-updated-chances-clinch-bracket-projections-race-scenarios" target="_blank">See More</a>
+        <h3>57 Super Bowl Rings, 57 Stories</h3>
+        <p>An evolving project that I've contributed to, showcasing the rich history of Super Bowl rings with updates added annually for each new winning team. This Gulp and Vanilla JS project emphasizes accessibility enhancements, improved tracking metrics, and performance optimizations, including native HTML lazy loading and video size reductions. Plans are in place to revamp the architecture for greater modularity in the upcoming season.</p>
+        <a href="https://www.espn.com/espn/feature/story/_/id/28360921/look-championship-ring-every-super-bowl" target="_blank">View Project</a>
       </div>
-      <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1704037022/playoff-predictor-2023_rnp4ic.jpg" alt="">
+      <img src="https://a.espncdn.com/prod/styles/pagetype/otl/2022/220202_nfl_super-bowl-rings/images/header_1280x720.jpg" alt="">
     </div>
     <div class="flex-item item-2">
       <div class="info">
-        <h3>57 Super Bowl Rings, 57 Stories</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum inventore aperiam cumque unde placeat impedit. Ullam, aliquam eligendi. Dolorum aliquam ad animi, doloremque at necessitatibus!</p>
-        <a href="https://www.espn.com/espn/feature/story/_/id/28360921/56-super-bowl-rings-56-stories" target="_blank">See More</a>
+        <h3>Live NFL Playoff Picture Updates (2023)</h3>
+        <p>In its second year, this project dynamically showcases NFL teams' live playoff probabilities through interactive charts and real-time data. This year, significant enhancements included a design overhaul, a refactoring of data controls to empower the project data team with user-end setup capabilities, and major accessibility improvements. The success of this format has paved the way for its application across future sports projects, demonstrating a commitment to both user accessibility and backend flexibility.</p>
+        <a href="https://www.espn.com/espn/feature/story/_/id/38686897/nfl-playoff-picture-live-updated-chances-clinch-bracket-projections-race-scenarios" target="_blank">Visit Project</a>
       </div>
-      <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1706494560/Screenshot_2024-01-28_at_9.15.44_PM_m6k7fc.png" alt="">
+      <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1704037022/playoff-predictor-2023_rnp4ic.jpg" alt="">
     </div>
     <div class="flex-item item-3">
       <div class="info">
         <h3>How quickly do 31 QBs earn Purdy's $870K?</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum inventore aperiam cumque unde placeat impedit. Ullam, aliquam eligendi. Dolorum aliquam ad animi, doloremque at necessitatibus!</p>
-        <a href="https://www.espn.com/espn/feature/story/_/id/38512080/nfl-quarterbacks-earn-san-francisco-49ers-brock-purdy-salary" target="_blank">See More</a>
+        <p>This innovative project juxtaposes the salary of NFL Quarterback Brock Purdy against those of other starting quarterbacks in the league. Crafted using Hugo, Vanilla JavaScript, and GSAP, it features an interactive slider bar at the top of the screen, allowing users to visually compare salaries and discern how many playing minutes it takes for each quarterback to earn Purdy's $870K</p>
+        <a href="https://www.espn.com/espn/feature/story/_/id/38512080/nfl-quarterbacks-earn-san-francisco-49ers-brock-purdy-salary" target="_blank">View Project</a>
       </div>
       <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1697894718/brock1_16x9_rkmyzk.jpg" alt="">
     </div>
@@ -138,15 +141,15 @@
     +flex($direction: column, $align: center, $justify: center)
     text-align: center
     background-color: $color-primary
-    height: 10%
     padding-inline: 1rem
+    padding-block: 1.5rem
 
-    +from(m)
-      height: 15%
+    &-container
+      +max-width(700px)
 
     h2
       font-size: 1.25rem
-      line-height: 0.8
+      line-height: 0.9
       font-family: Syne, sans-serif
       font-weight: 800
       text-transform: uppercase
@@ -155,7 +158,7 @@
         font-size: 2rem
 
     p
-      margin-top: 0.5rem
+      margin-top: 1rem
 
   .flex
     height: 90%
