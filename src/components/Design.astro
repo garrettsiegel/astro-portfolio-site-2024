@@ -1,27 +1,13 @@
-<div class="design__header">
-  <h2>Design</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus veritatis cumque itaque tenetur, voluptas quisquam in ex ipsa modi officiis nihil dolor dolore voluptates illo autem, quia iusto ea adipisci exercitationem, accusamus sed? Repudiandae nihil nemo saepe nesciunt assumenda earum labore explicabo, iste atque quibusdam blanditiis, modi rem aspernatur magni.</p>
+<div class="design__header--wrapper">
+  <div class="design__header">
+    <h2>Design</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus veritatis cumque itaque tenetur, voluptas quisquam in ex ipsa modi officiis nihil dolor dolore voluptates illo autem, quia iusto ea adipisci exercitationem, accusamus sed? Repudiandae nihil nemo saepe nesciunt assumenda earum labore explicabo, iste atque quibusdam blanditiis, modi rem aspernatur magni.</p>
+  </div>
 </div>
 
+<!-- 
 <div class="design">
-  <!-- <div class="div1">
-    <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1704861823/vitacost-email-mockup_draft1_kavy9b.jpg" alt="">
-  </div>
-  <div class="div2">
-    <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1689217044/abstract-expression-min_cc2bul.gif" alt="">
-  </div>
-  <div class="div3">
-    <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1689225876/letterb-animation_so62ee.gif" alt="">
-  </div>
-  <div class="div4">
-    <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1689217637/design-systems_uf7ovv.jpg" alt="">
-  </div>
-  <div class="div5">
-    <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1689224972/acura_bgklu0.jpg" alt="">
-  </div>
-  <div class="div6">
-    <img src="https://res.cloudinary.com/drxro4uha/image/upload/v1691984706/Kobe_swayqc.jpg" alt="">
-  </div> -->
+  
   <div class="grid">
     <div class="grid-item"></div>
     <div class="grid-item"></div>
@@ -36,15 +22,34 @@
     <div class="grid-item"></div>
     <div class="grid-item"></div>
   </div>
-</div>
+</div> -->
 
 <style lang="sass">
   @import '../css/mixins.sass'
 
   .design__header
-    background-color: $color-gray-lt
     padding: 2rem
     margin-top: 3rem
+    +max-width(700px)
+    margin-inline: auto
+    text-align: center
+
+    &--wrapper
+      background-color: $color-gray-lt
+
+
+    h2
+      font-size: 1.25rem
+      line-height: 0.9
+      font-family: Syne, sans-serif
+      font-weight: 800
+      text-transform: uppercase
+
+      +from(xs)
+        font-size: 2rem
+
+    p
+      margin-top: 1rem
 
   .design 
     height: 100vh
